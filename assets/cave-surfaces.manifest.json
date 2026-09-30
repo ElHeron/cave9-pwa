@@ -1,0 +1,1379 @@
+{
+  "version": "CaveSurfaceRuntimeV1",
+  "width": 128,
+  "height": 128,
+  "layerCount": 53,
+  "columns": 8,
+  "rows": 7,
+  "sourceImage": "cave-surfaces-source.png",
+  "layers": [
+    {
+      "id": "tunnel.v1.neutral",
+      "index": 0,
+      "family": null,
+      "variant": "v1",
+      "role": "neutral",
+      "meanLinear": [
+        0.03832626,
+        0.03273732,
+        0.03635122
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v1-angular-basalt-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v1.floor",
+      "index": 1,
+      "family": null,
+      "variant": "v1",
+      "role": "floor",
+      "meanLinear": [
+        0.09481255,
+        0.0242539,
+        0.01243853
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v1-angular-basalt-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v1.sideWall",
+      "index": 2,
+      "family": null,
+      "variant": "v1",
+      "role": "sideWall",
+      "meanLinear": [
+        0.02556402,
+        0.05880546,
+        0.06759567
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v1-angular-basalt-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v1.ceiling",
+      "index": 3,
+      "family": null,
+      "variant": "v1",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02812703,
+        0.03817191,
+        0.02694468
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v1-angular-basalt-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v2.neutral",
+      "index": 4,
+      "family": null,
+      "variant": "v2",
+      "role": "neutral",
+      "meanLinear": [
+        0.04015385,
+        0.03657301,
+        0.04186636
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v2-stratified-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v2.floor",
+      "index": 5,
+      "family": null,
+      "variant": "v2",
+      "role": "floor",
+      "meanLinear": [
+        0.09566194,
+        0.03316417,
+        0.02623139
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v2-stratified-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v2.sideWall",
+      "index": 6,
+      "family": null,
+      "variant": "v2",
+      "role": "sideWall",
+      "meanLinear": [
+        0.03676436,
+        0.06379859,
+        0.07303324
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v2-stratified-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v2.ceiling",
+      "index": 7,
+      "family": null,
+      "variant": "v2",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02969562,
+        0.03341057,
+        0.0284267
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v2-stratified-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 0,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v3.neutral",
+      "index": 8,
+      "family": null,
+      "variant": "v3",
+      "role": "neutral",
+      "meanLinear": [
+        0.02269181,
+        0.02137818,
+        0.02299391
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v3-mineral-veins-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v3.floor",
+      "index": 9,
+      "family": null,
+      "variant": "v3",
+      "role": "floor",
+      "meanLinear": [
+        0.04228356,
+        0.02780366,
+        0.02282292
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v3-mineral-veins-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v3.sideWall",
+      "index": 10,
+      "family": null,
+      "variant": "v3",
+      "role": "sideWall",
+      "meanLinear": [
+        0.01968501,
+        0.03772309,
+        0.05038732
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v3-mineral-veins-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v3.ceiling",
+      "index": 11,
+      "family": null,
+      "variant": "v3",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02541586,
+        0.04005436,
+        0.02544032
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v3-mineral-veins-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v4.neutral",
+      "index": 12,
+      "family": null,
+      "variant": "v4",
+      "role": "neutral",
+      "meanLinear": [
+        0.07176417,
+        0.05790593,
+        0.05808948
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v4-eroded-monolith-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v4.floor",
+      "index": 13,
+      "family": null,
+      "variant": "v4",
+      "role": "floor",
+      "meanLinear": [
+        0.13918872,
+        0.04848904,
+        0.03849045
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v4-eroded-monolith-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v4.sideWall",
+      "index": 14,
+      "family": null,
+      "variant": "v4",
+      "role": "sideWall",
+      "meanLinear": [
+        0.03955512,
+        0.08526723,
+        0.09850179
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v4-eroded-monolith-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v4.ceiling",
+      "index": 15,
+      "family": null,
+      "variant": "v4",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02861144,
+        0.03141882,
+        0.02791003
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v4-eroded-monolith-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 128,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v5.neutral",
+      "index": 16,
+      "family": null,
+      "variant": "v5",
+      "role": "neutral",
+      "meanLinear": [
+        0.02144971,
+        0.02055059,
+        0.02970501
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v5-obsidian-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v5.floor",
+      "index": 17,
+      "family": null,
+      "variant": "v5",
+      "role": "floor",
+      "meanLinear": [
+        0.04985837,
+        0.01905939,
+        0.0207076
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v5-obsidian-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v5.sideWall",
+      "index": 18,
+      "family": null,
+      "variant": "v5",
+      "role": "sideWall",
+      "meanLinear": [
+        0.02210171,
+        0.04422316,
+        0.07692133
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v5-obsidian-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v5.ceiling",
+      "index": 19,
+      "family": null,
+      "variant": "v5",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02273218,
+        0.02541187,
+        0.03259767
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v5-obsidian-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v6.neutral",
+      "index": 20,
+      "family": null,
+      "variant": "v6",
+      "role": "neutral",
+      "meanLinear": [
+        0.02927361,
+        0.02725617,
+        0.04012931
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v6-columnar-basalt-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v6.floor",
+      "index": 21,
+      "family": null,
+      "variant": "v6",
+      "role": "floor",
+      "meanLinear": [
+        0.06246777,
+        0.02964851,
+        0.02108649
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v6-columnar-basalt-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v6.sideWall",
+      "index": 22,
+      "family": null,
+      "variant": "v6",
+      "role": "sideWall",
+      "meanLinear": [
+        0.02016413,
+        0.06011361,
+        0.07939866
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v6-columnar-basalt-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v6.ceiling",
+      "index": 23,
+      "family": null,
+      "variant": "v6",
+      "role": "ceiling",
+      "meanLinear": [
+        0.02360397,
+        0.02677586,
+        0.03216276
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v6-columnar-basalt-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 256,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v7.neutral",
+      "index": 24,
+      "family": null,
+      "variant": "v7",
+      "role": "neutral",
+      "meanLinear": [
+        0.09259053,
+        0.08004204,
+        0.0909587
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v7-eroded-limestone-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v7.floor",
+      "index": 25,
+      "family": null,
+      "variant": "v7",
+      "role": "floor",
+      "meanLinear": [
+        0.14956246,
+        0.05181966,
+        0.03567884
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v7-eroded-limestone-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v7.sideWall",
+      "index": 26,
+      "family": null,
+      "variant": "v7",
+      "role": "sideWall",
+      "meanLinear": [
+        0.05303564,
+        0.13159867,
+        0.1350631
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v7-eroded-limestone-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v7.ceiling",
+      "index": 27,
+      "family": null,
+      "variant": "v7",
+      "role": "ceiling",
+      "meanLinear": [
+        0.03154997,
+        0.03759181,
+        0.02447546
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v7-eroded-limestone-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v8.neutral",
+      "index": 28,
+      "family": null,
+      "variant": "v8",
+      "role": "neutral",
+      "meanLinear": [
+        0.05955073,
+        0.05383086,
+        0.06450084
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/cave9-rock-v8-vesicular-lava-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v8.floor",
+      "index": 29,
+      "family": null,
+      "variant": "v8",
+      "role": "floor",
+      "meanLinear": [
+        0.09350358,
+        0.02398648,
+        0.01486353
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v8-vesicular-lava-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v8.sideWall",
+      "index": 30,
+      "family": null,
+      "variant": "v8",
+      "role": "sideWall",
+      "meanLinear": [
+        0.0158656,
+        0.07391767,
+        0.09615308
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v8-vesicular-lava-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "tunnel.v8.ceiling",
+      "index": 31,
+      "family": null,
+      "variant": "v8",
+      "role": "ceiling",
+      "meanLinear": [
+        0.04032623,
+        0.04761123,
+        0.03239269
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/tunnel-positional-v1-v8/tunnel-v8-vesicular-lava-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 384,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.layerA",
+      "index": 32,
+      "family": "branching",
+      "variant": null,
+      "role": "layerA",
+      "meanLinear": [
+        0.03233973,
+        0.02573849,
+        0.02424269
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/branching-layer-a-shale-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.layerB",
+      "index": 33,
+      "family": "branching",
+      "variant": null,
+      "role": "layerB",
+      "meanLinear": [
+        0.38117995,
+        0.1286337,
+        0.0177137
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/branching-layer-b-ochre-claystone-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.layerC",
+      "index": 34,
+      "family": "branching",
+      "variant": null,
+      "role": "layerC",
+      "meanLinear": [
+        0.08667866,
+        0.13227636,
+        0.11886055
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/branching-layer-c-teal-marl-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.lava",
+      "index": 35,
+      "family": "branching",
+      "variant": null,
+      "role": "lava",
+      "meanLinear": [
+        0.0475281,
+        0.01912602,
+        0.01119434
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/branching-floor-d-lava-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.floor",
+      "index": 36,
+      "family": "branching",
+      "variant": null,
+      "role": "floor",
+      "meanLinear": [
+        0.12817793,
+        0.0310348,
+        0.0107921
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/branching-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.sideWall",
+      "index": 37,
+      "family": "branching",
+      "variant": null,
+      "role": "sideWall",
+      "meanLinear": [
+        0.03766111,
+        0.07318547,
+        0.06624926
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/branching-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.branching.ceiling",
+      "index": 38,
+      "family": "branching",
+      "variant": null,
+      "role": "ceiling",
+      "meanLinear": [
+        0.04726319,
+        0.06232329,
+        0.02353392
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/branching-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.layerA",
+      "index": 39,
+      "family": "crystal",
+      "variant": null,
+      "role": "layerA",
+      "meanLinear": [
+        0.00879934,
+        0.00859205,
+        0.01591601
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/crystal-layer-a-obsidian-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 512,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.layerB",
+      "index": 40,
+      "family": "crystal",
+      "variant": null,
+      "role": "layerB",
+      "meanLinear": [
+        0.04603353,
+        0.04997809,
+        0.11006327
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/crystal-layer-b-indigo-schist-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.layerC",
+      "index": 41,
+      "family": "crystal",
+      "variant": null,
+      "role": "layerC",
+      "meanLinear": [
+        0.02985005,
+        0.05279604,
+        0.06968905
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/crystal-layer-c-cyan-quartz-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.lava",
+      "index": 42,
+      "family": "crystal",
+      "variant": null,
+      "role": "lava",
+      "meanLinear": [
+        0.04680432,
+        0.01279912,
+        0.02623915
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/crystal-floor-d-violet-glass-lava-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.floor",
+      "index": 43,
+      "family": "crystal",
+      "variant": null,
+      "role": "floor",
+      "meanLinear": [
+        0.0701451,
+        0.02164355,
+        0.01422827
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/crystal-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.sideWall",
+      "index": 44,
+      "family": "crystal",
+      "variant": null,
+      "role": "sideWall",
+      "meanLinear": [
+        0.01279811,
+        0.07661649,
+        0.10933979
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/crystal-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.crystal.ceiling",
+      "index": 45,
+      "family": "crystal",
+      "variant": null,
+      "role": "ceiling",
+      "meanLinear": [
+        0.03118265,
+        0.05380102,
+        0.02384673
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/crystal-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 640,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.layerA",
+      "index": 46,
+      "family": "coiling",
+      "variant": null,
+      "role": "layerA",
+      "meanLinear": [
+        0.03310772,
+        0.05664837,
+        0.07870725
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/coiling-layer-a-slate-basalt-128.png",
+      "atlas": {
+        "x": 768,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.layerB",
+      "index": 47,
+      "family": "coiling",
+      "variant": null,
+      "role": "layerB",
+      "meanLinear": [
+        0.12022807,
+        0.02277062,
+        0.00966663
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/coiling-layer-b-rust-ironstone-128.png",
+      "atlas": {
+        "x": 896,
+        "y": 640,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.layerC",
+      "index": 48,
+      "family": "coiling",
+      "variant": null,
+      "role": "layerC",
+      "meanLinear": [
+        0.0626401,
+        0.05102294,
+        0.03605847
+      ],
+      "directional": true,
+      "transforms": [
+        "mirrorX",
+        "rotate180"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/coiling-layer-c-copper-verdigris-128.png",
+      "atlas": {
+        "x": 0,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.lava",
+      "index": 49,
+      "family": "coiling",
+      "variant": null,
+      "role": "lava",
+      "meanLinear": [
+        0.04653647,
+        0.02134446,
+        0.01401364
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/coiling-floor-d-braided-lava-128.png",
+      "atlas": {
+        "x": 128,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.floor",
+      "index": 50,
+      "family": "coiling",
+      "variant": null,
+      "role": "floor",
+      "meanLinear": [
+        0.08061675,
+        0.02450424,
+        0.01527655
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/coiling-floor-ochre-red-128.png",
+      "atlas": {
+        "x": 256,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.sideWall",
+      "index": 51,
+      "family": "coiling",
+      "variant": null,
+      "role": "sideWall",
+      "meanLinear": [
+        0.03595806,
+        0.06941848,
+        0.05473935
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/coiling-side-turquoise-blue-128.png",
+      "atlas": {
+        "x": 384,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      }
+    },
+    {
+      "id": "family.coiling.ceiling",
+      "index": 52,
+      "family": "coiling",
+      "variant": null,
+      "role": "ceiling",
+      "meanLinear": [
+        0.031945,
+        0.04541171,
+        0.01712396
+      ],
+      "directional": false,
+      "transforms": [
+        "mirrorX",
+        "mirrorY",
+        "rotate90",
+        "rotate180",
+        "rotate270"
+      ],
+      "source": "artifacts/texture-concepts/layered-families/positional-surfaces/coiling-ceiling-plant-green-128.png",
+      "atlas": {
+        "x": 512,
+        "y": 768,
+        "width": 128,
+        "height": 128
+      }
+    }
+  ]
+}

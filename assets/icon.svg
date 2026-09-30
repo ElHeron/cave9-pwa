@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Cave9</title>
+  <rect width="512" height="512" rx="112" fill="#05060a"/>
+  <path d="M96 308c0-113 72-190 160-190s160 77 160 190v55H96z" fill="#111827"/>
+  <path d="M126 311c0-92 57-157 130-157s130 65 130 157" fill="none" stroke="#3bd8e5" stroke-linecap="round" stroke-width="38"/>
+  <path d="M168 344c29 28 57 42 88 42s59-14 88-42" fill="none" stroke="#91f27b" stroke-linecap="round" stroke-width="24"/>
+  <path d="M323 224h48v117c0 47-27 75-71 75-24 0-44-9-59-26l29-30c9 10 18 15 30 15 15 0 23-10 23-30v-31h-47v-40h47z" fill="#ff9f43"/>
+  <circle cx="186" cy="290" r="13" fill="#f7fbff"/>
+</svg>

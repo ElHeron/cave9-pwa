@@ -1,0 +1,23 @@
+main coders:
+============
+
+Carlo Caputo  (aka zed9h)  <carlo.caputo@gmail.com>
+
+Rodolfo Borges  (aka bart9h)  <rodolfo.borges@gmail.com>
+
+
+contributors:
+=============
+
+Victor Bogado  <victor@bogado.net>
+	- collision detection idea
+	- --aidtrack feature
+	- cave deformation code
+
+Timo Paulssen <timonator@perpetuum-immobile.de>
+	- deterministic cave generation (--level)
+	- other improvements and fixes
+
+Daniel Beltrao Borges  (aka dbb9h)  <dbb9hells@gmail.com>
+	- prototype 2D cave-generation code
+

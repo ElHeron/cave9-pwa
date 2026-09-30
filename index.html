@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#05060a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Cave9" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Cave9 — a fast minimalist 3D cave-runner. Fly through a tight organic cave, dodge the walls, chase the distance." />
+  <link rel="icon" href="./assets/icon.png" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <title>Cave9</title>
+  <script type="module" crossorigin src="./assets/index-cF8K9_Zi.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-DdFvkOCO.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-CNApKMzL.css">
+</head>
+<body>
+  <canvas id="game-canvas" tabindex="-1" aria-label="Cave9 flight view"></canvas>
+
+  <!-- The complete in-flight UI: one crosshair plus the post-9-km speed FX. -->
+  <div id="flight-overlay" class="flight-overlay hidden" aria-hidden="true">
+    <div id="speed-vignette" class="speed-vignette"></div>
+    <svg class="crosshair" viewBox="0 0 100 100" width="100" height="100">
+      <circle cx="50" cy="50" r="14" />
+      <line x1="50" y1="30" x2="50" y2="40" />
+      <line x1="50" y1="60" x2="50" y2="70" />
+      <line x1="30" y1="50" x2="40" y2="50" />
+      <line x1="60" y1="50" x2="70" y2="50" />
+      <circle class="crosshair-dot" cx="50" cy="50" r="1.4" />
+    </svg>
+    <button id="btn-touch-pause" class="touch-pause" type="button" aria-label="Pause game">Ⅱ</button>
+  </div>
+
+  <!-- Touch controls -->
+  <div id="touch-controls" class="touch-controls hidden">
+    <div id="touch-left" class="touch-zone touch-left"><span>◣</span></div>
+    <div id="touch-right" class="touch-zone touch-right"><span>◢</span></div>
+  </div>
+
+  <!-- Overlay screens -->
+  <div id="overlay" class="overlay">
+
+    <!-- Main menu -->
+    <section id="screen-menu" class="screen" aria-labelledby="menu-title">
+      <h1 id="menu-title" class="logo">CAVE<span>9</span></h1>
+      <p class="tagline">SF-Cave goes 3D — fly deep, stay alive.</p>
+      <div class="menu-buttons">
+        <div class="menu-primary-actions">
+          <button id="btn-play" class="btn btn-primary">PLAY</button>
+          <div id="first-run-help" class="first-run-help hidden">
+            <p>Hold left/right or A/D to steer. Esc or the pause button stops the run.</p>
+            <button id="btn-help-skip" type="button">SKIP HELP</button>
+          </div>
+          <button id="btn-demo" class="btn">WATCH DEMO</button>
+          <button id="btn-daily" class="btn">DAILY CHALLENGE</button>
+          <div class="daily-info">Today's best: <span id="menu-daily-best">0</span> · seed <span id="menu-daily-seed">—</span></div>
+          <p class="daily-rules">Daily rules: two thrusters · standard thrust · obstacles on</p>
+        </div>
+        <div class="menu-secondary-actions">
+          <div class="seed-entry">
+            <label for="seed-input">Play a specific seed</label>
+            <div class="seed-entry-row">
+              <input id="seed-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="Signed number" />
+              <button id="btn-seed-play" class="btn" type="button">PLAY SEED</button>
+            </div>
+          </div>
+          <p id="menu-update-notice" class="update-notice hidden" role="status" aria-live="polite">Update ready. Close all Cave9 tabs, then reopen the game to use the new version.</p>
+          <div id="shared-run" class="shared-run hidden">
+            <p id="shared-run-description"></p>
+            <button id="btn-shared-play" class="btn btn-primary" type="button">PLAY SHARED RUN</button>
+          </div>
+          <p id="menu-message" class="menu-message hidden" role="alert"></p>
+          <button id="btn-settings" class="btn">SETTINGS</button>
+          <button id="btn-credits" class="btn">CREDITS &amp; LICENSE</button>
+        </div>
+      </div>
+      <div class="menu-best">Best: <span id="menu-best">0</span></div>
+      <div class="hint" id="menu-hint">Hold to thrust • two zones / two thrusters</div>
+    </section>
+
+    <!-- Settings -->
+    <section id="screen-settings" class="screen hidden" aria-labelledby="settings-title">
+      <h2 id="settings-title">SETTINGS</h2>
+      <div class="settings-list" id="settings-list"></div>
+      <div class="screen-buttons">
+        <button id="btn-settings-reset" class="btn btn-danger">RESET</button>
+        <button id="btn-settings-back" class="btn btn-primary">BACK</button>
+      </div>
+    </section>
+
+    <!-- Credits -->
+    <section id="screen-credits" class="screen hidden" aria-labelledby="credits-title">
+      <h2 id="credits-title">CREDITS &amp; LICENSE</h2>
+      <div class="credits-body" id="credits-body"></div>
+      <div class="screen-buttons">
+        <button id="btn-credits-back" class="btn btn-primary">BACK</button>
+      </div>
+    </section>
+
+    <!-- Pause -->
+    <section id="screen-pause" class="screen hidden" aria-labelledby="pause-title">
+      <h2 id="pause-title">PAUSED</h2>
+      <div class="menu-buttons">
+        <button id="btn-resume" class="btn btn-primary">RESUME</button>
+        <button id="btn-pause-restart" class="btn">RESTART</button>
+        <button id="btn-pause-menu" class="btn">MAIN MENU</button>
+      </div>
+    </section>
+
+    <!-- Death -->
+    <section id="screen-death" class="screen screen-danger hidden" aria-labelledby="death-title">
+      <h2 id="death-title" class="death-title">CRASHED</h2>
+      <p id="death-mode" class="result-mode"></p>
+      <div class="death-stats">
+        <div class="stat-big"><span class="stat-label">SCORE</span><span id="death-score">0</span></div>
+        <div id="death-newbest" class="new-best hidden">NEW BEST!</div>
+        <p id="death-best" class="result-best"></p>
+        <div class="result-grid">
+          <div>Distance <strong id="death-distance">0 m</strong></div>
+          <div>Peak speed <strong id="death-speed">0</strong></div>
+          <div>Graze time <strong id="death-graze">0 s</strong></div>
+          <div>Best combo <strong id="death-combo">×1.0</strong></div>
+        </div>
+        <p id="death-rules" class="result-rules"></p>
+        <p id="death-update-notice" class="update-notice hidden" role="status" aria-live="polite">Update ready. Close all Cave9 tabs, then reopen the game to use the new version.</p>
+      </div>
+      <div class="menu-buttons">
+        <button id="btn-retry" class="btn btn-primary">RETRY</button>
+        <button id="btn-death-menu" class="btn">MAIN MENU</button>
+        <div class="screen-buttons">
+          <button id="btn-share" class="btn">COPY LINK</button>
+          <button id="btn-share-result" class="btn">COPY RESULT</button>
+        </div>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Demo / attract mode overlay (tap anywhere to take over) -->
+  <div id="demo-overlay" class="demo-overlay hidden">
+    <div class="demo-badge">DEMO</div>
+    <div class="demo-hint">autopilot flying — tap or press any key to play · Esc for menu</div>
+  </div>
+
+  <!-- Portrait fallback: gameplay is landscape-first. On a portrait phone we
+       cover the screen with a rotate hint instead of squashing the view. Driven
+       purely by an orientation media query (see styles.css). -->
+  <div id="rotate-hint" class="rotate-hint">
+    <div class="rotate-icon">⟳</div>
+    <h2>ROTATE YOUR DEVICE</h2>
+    <p>Cave9 plays best in landscape.<br />Turn your phone sideways to fly.</p>
+  </div>
+
+  <div id="loading" class="loading">loading…</div>
+
+</body>
+</html>
