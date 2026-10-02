@@ -10,12 +10,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="Cave9 — a fast minimalist 3D cave-runner. Fly through a tight organic cave, dodge the walls, chase the distance." />
   <link rel="icon" href="./assets/icon.png" />
-  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <title>Cave9</title>
-  <script type="module" crossorigin src="./assets/index-cF8K9_Zi.js"></script>
+  <script type="module" crossorigin src="./assets/index-Cki2zX7s.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-DdFvkOCO.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CNApKMzL.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-vvFN-PU4.css">
 </head>
 <body>
   <canvas id="game-canvas" tabindex="-1" aria-label="Cave9 flight view"></canvas>
@@ -45,95 +45,143 @@
 
     <!-- Main menu -->
     <section id="screen-menu" class="screen" aria-labelledby="menu-title">
-      <h1 id="menu-title" class="logo">CAVE<span>9</span></h1>
-      <p class="tagline">SF-Cave goes 3D — fly deep, stay alive.</p>
-      <div class="menu-buttons">
-        <div class="menu-primary-actions">
-          <button id="btn-play" class="btn btn-primary">PLAY</button>
-          <div id="first-run-help" class="first-run-help hidden">
-            <p>Hold left/right or A/D to steer. Esc or the pause button stops the run.</p>
-            <button id="btn-help-skip" type="button">SKIP HELP</button>
-          </div>
-          <button id="btn-demo" class="btn">WATCH DEMO</button>
-          <button id="btn-daily" class="btn">DAILY CHALLENGE</button>
-          <div class="daily-info">Today's best: <span id="menu-daily-best">0</span> · seed <span id="menu-daily-seed">—</span></div>
-          <p class="daily-rules">Daily rules: two thrusters · standard thrust · obstacles on</p>
+      <header class="menu-masthead">
+        <h1 id="menu-title" class="brand"><img src="./assets/icon-192.png" width="42" height="42" alt="" /><span class="brand-word">CAVE<span>9</span></span></h1>
+        <div class="menu-best"><span class="eyebrow">Local best</span><strong id="menu-best">0</strong></div>
+      </header>
+      <div class="menu-caption"><p class="eyebrow">Your next expedition</p><h2>Into the depths.</h2></div>
+      <div class="menu-notices">
+        <div id="first-run-help" class="first-run-help hidden">
+          <p>Hold left/right or A/D to steer. Esc or the pause button stops the run.</p>
+          <button id="btn-help-skip" class="text-button" type="button">SKIP HELP</button>
         </div>
-        <div class="menu-secondary-actions">
-          <div class="seed-entry">
-            <label for="seed-input">Play a specific seed</label>
-            <div class="seed-entry-row">
-              <input id="seed-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="Signed number" />
-              <button id="btn-seed-play" class="btn" type="button">PLAY SEED</button>
-            </div>
-          </div>
-          <p id="menu-update-notice" class="update-notice hidden" role="status" aria-live="polite">Update ready. Close all Cave9 tabs, then reopen the game to use the new version.</p>
-          <div id="shared-run" class="shared-run hidden">
-            <p id="shared-run-description"></p>
-            <button id="btn-shared-play" class="btn btn-primary" type="button">PLAY SHARED RUN</button>
-          </div>
-          <p id="menu-message" class="menu-message hidden" role="alert"></p>
-          <button id="btn-settings" class="btn">SETTINGS</button>
-          <button id="btn-credits" class="btn">CREDITS &amp; LICENSE</button>
+        <div id="shared-run" class="shared-run hidden">
+          <p class="eyebrow">An expedition shared with you</p>
+          <p id="shared-run-description"></p>
+          <button id="btn-shared-play" class="btn btn-primary" type="button">Play shared run <span aria-hidden="true">↗</span></button>
         </div>
+        <p id="menu-update-notice" class="update-notice hidden" role="status" aria-live="polite">Update ready. Close all Cave9 tabs, then reopen the game to use the new version.</p>
+        <p id="menu-message" class="menu-message hidden" role="alert"></p>
       </div>
-      <div class="menu-best">Best: <span id="menu-best">0</span></div>
-      <div class="hint" id="menu-hint">Hold to thrust • two zones / two thrusters</div>
+      <nav class="flight-route" aria-label="Choose an expedition">
+        <svg class="route-curve" aria-hidden="true"><path id="menu-route-path" /></svg>
+        <div class="route-stop route-play">
+          <span class="route-point" aria-hidden="true"></span>
+          <button id="btn-play" class="btn btn-primary">Free flight <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="route-stop route-daily">
+          <span class="route-point" aria-hidden="true"></span>
+          <button id="btn-daily" class="btn" aria-describedby="daily-info daily-rules">Daily challenge <span aria-hidden="true">↗</span></button>
+          <div class="daily-details">
+            <div id="daily-info" class="daily-info">Today: <span id="menu-daily-best">0</span> · seed <span id="menu-daily-seed">—</span></div>
+            <p id="daily-rules" class="daily-rules">Two thrusters · standard thrust · obstacles on</p>
+          </div>
+        </div>
+        <div class="route-stop route-seed">
+          <span class="route-point" aria-hidden="true"></span>
+          <button id="btn-seed-select" class="btn">Choose seed <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="route-stop route-demo">
+          <span class="route-point" aria-hidden="true"></span>
+          <button id="btn-demo" class="btn">Watch demo <span aria-hidden="true">↗</span></button>
+        </div>
+      </nav>
+      <footer class="menu-footer">
+        <p class="hint" id="menu-hint">Hold to thrust · two zones / two thrusters</p>
+        <div class="utility-actions">
+          <button id="btn-settings" class="text-button">Settings</button>
+          <button id="btn-credits" class="text-button">Credits &amp; license</button>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Seed selection opens from its route station. -->
+    <section id="screen-seed" class="screen screen-workspace hidden" aria-labelledby="seed-title">
+      <div class="screen-brand brand"><img src="./assets/icon-192.png" width="42" height="42" alt="" /><span class="brand-word">CAVE<span>9</span></span></div>
+      <div class="material-panel seed-panel">
+        <p class="eyebrow">Your own expedition</p>
+        <h2 id="seed-title">Choose a seed.</h2>
+        <p class="panel-description">Return to the same cave, or follow a route someone shared with you. Your current gameplay settings apply.</p>
+        <div class="seed-entry">
+          <label for="seed-input">Cave seed</label>
+          <div class="seed-entry-row">
+            <input id="seed-input" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="e.g. 424242" aria-describedby="seed-range seed-message" />
+            <button id="btn-seed-play" class="btn btn-primary" type="button">Fly this seed <span aria-hidden="true">↗</span></button>
+          </div>
+          <p id="seed-range" class="hint">A nonzero whole number from −2147483648 to 2147483647.</p>
+          <p id="seed-message" class="menu-message hidden" role="alert"></p>
+        </div>
+        <button id="btn-seed-back" class="text-button">← Back to start</button>
+      </div>
     </section>
 
     <!-- Settings -->
     <section id="screen-settings" class="screen hidden" aria-labelledby="settings-title">
-      <h2 id="settings-title">SETTINGS</h2>
-      <div class="settings-list" id="settings-list"></div>
-      <div class="screen-buttons">
-        <button id="btn-settings-reset" class="btn btn-danger">RESET</button>
-        <button id="btn-settings-back" class="btn btn-primary">BACK</button>
+      <div class="screen-brand brand"><img src="./assets/icon-192.png" width="42" height="42" alt="" /><span class="brand-word">CAVE<span>9</span></span></div>
+      <div class="material-panel settings-panel">
+        <h2 id="settings-title">Settings.</h2>
+        <div class="settings-list" id="settings-list"></div>
+        <div class="screen-buttons">
+          <button id="btn-settings-reset" class="btn btn-danger">Reset settings</button>
+          <button id="btn-settings-back" class="btn btn-primary">Back to start <span aria-hidden="true">↗</span></button>
+        </div>
       </div>
     </section>
 
     <!-- Credits -->
     <section id="screen-credits" class="screen hidden" aria-labelledby="credits-title">
-      <h2 id="credits-title">CREDITS &amp; LICENSE</h2>
-      <div class="credits-body" id="credits-body"></div>
-      <div class="screen-buttons">
-        <button id="btn-credits-back" class="btn btn-primary">BACK</button>
+      <div class="screen-brand brand"><img src="./assets/icon-192.png" width="42" height="42" alt="" /><span class="brand-word">CAVE<span>9</span></span></div>
+      <div class="material-panel credits-panel">
+        <h2 id="credits-title">Credits &amp; license.</h2>
+        <div class="credits-body" id="credits-body"></div>
+        <div class="screen-buttons">
+          <button id="btn-credits-back" class="btn btn-primary">Back to start <span aria-hidden="true">↗</span></button>
+        </div>
       </div>
     </section>
 
     <!-- Pause -->
     <section id="screen-pause" class="screen hidden" aria-labelledby="pause-title">
-      <h2 id="pause-title">PAUSED</h2>
-      <div class="menu-buttons">
-        <button id="btn-resume" class="btn btn-primary">RESUME</button>
-        <button id="btn-pause-restart" class="btn">RESTART</button>
-        <button id="btn-pause-menu" class="btn">MAIN MENU</button>
+      <div class="screen-brand brand"><img src="./assets/icon-192.png" width="42" height="42" alt="" /><span class="brand-word">CAVE<span>9</span></span></div>
+      <div class="pause-layout">
+        <p class="eyebrow">A moment above the depths</p>
+        <h2 id="pause-title">Flight paused.</h2>
+        <div class="pause-actions route-actions">
+          <button id="btn-resume" class="btn btn-primary">Resume flight <span aria-hidden="true">↗</span></button>
+          <button id="btn-pause-restart" class="btn">Restart <span aria-hidden="true">↗</span></button>
+          <button id="btn-pause-menu" class="btn">Main menu <span aria-hidden="true">↗</span></button>
+        </div>
       </div>
     </section>
 
     <!-- Death -->
     <section id="screen-death" class="screen screen-danger hidden" aria-labelledby="death-title">
-      <h2 id="death-title" class="death-title">CRASHED</h2>
-      <p id="death-mode" class="result-mode"></p>
-      <div class="death-stats">
-        <div class="stat-big"><span class="stat-label">SCORE</span><span id="death-score">0</span></div>
-        <div id="death-newbest" class="new-best hidden">NEW BEST!</div>
-        <p id="death-best" class="result-best"></p>
-        <div class="result-grid">
+      <div class="result-layout">
+        <header class="result-heading"><h2 id="death-title" class="death-title">Flight ended</h2><p id="death-mode" class="result-mode"></p></header>
+        <div class="result-overview">
+          <div class="death-stats">
+            <div class="score-line"><div class="stat-big"><span class="stat-label">SCORE</span><span id="death-score">0</span></div><div id="death-newbest" class="new-best hidden">NEW BEST!</div></div>
+            <p id="death-best" class="result-best"></p>
+          </div>
+          <p id="death-rules" class="result-rules"></p>
+        </div>
+        <div class="result-grid material-panel">
           <div>Distance <strong id="death-distance">0 m</strong></div>
           <div>Peak speed <strong id="death-speed">0</strong></div>
           <div>Graze time <strong id="death-graze">0 s</strong></div>
           <div>Best combo <strong id="death-combo">×1.0</strong></div>
         </div>
-        <p id="death-rules" class="result-rules"></p>
         <p id="death-update-notice" class="update-notice hidden" role="status" aria-live="polite">Update ready. Close all Cave9 tabs, then reopen the game to use the new version.</p>
-      </div>
-      <div class="menu-buttons">
-        <button id="btn-retry" class="btn btn-primary">RETRY</button>
-        <button id="btn-death-menu" class="btn">MAIN MENU</button>
-        <div class="screen-buttons">
-          <button id="btn-share" class="btn">COPY LINK</button>
-          <button id="btn-share-result" class="btn">COPY RESULT</button>
-        </div>
+        <footer class="result-actions">
+          <div class="screen-buttons">
+            <button id="btn-retry" class="btn btn-primary">Retry <span aria-hidden="true">↗</span></button>
+            <button id="btn-death-menu" class="btn">Main menu <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="utility-actions">
+            <button id="btn-share" class="text-button">Copy link</button>
+            <button id="btn-share-result" class="text-button">Copy result</button>
+          </div>
+        </footer>
         <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>
